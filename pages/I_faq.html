@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dr. Bronner's Website Redesign</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- CSS RESET-->
+        <link href="../css/reset.css" type="text/css" rel="stylesheet">
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        
+        <!-- CSS -->
+        <link href="../css/style.css" type="text/css" rel="stylesheet">
+        
+        <!-- jQUERY -->
+        <script src="../js/jquery-3.6.3.min.js"></script>
+        
+        <!-- jQUERY TOGGLE HAMBURGER MENU -->
+        <script>               
+        $(document).ready(function() {
+//            $('.menuItems').hide();
+            $('.menuToggle').click(function(){
+                $('.menuItems').toggle();
+            });
+            $(window).resize( function(){
+                $('.menuItems').show();
+            });
+        });
+        </script>
+        
+    </head>
+
+    <body id="pageTop">
+
+        <!-- HEADER SECTION ********************************** -->
+        <header class="headerTop">
+            <section>
+                <a href="../index.html"><img src="../images/drbronners-logo-white.png" alt="dr bronner white logo"> </a> 
+                <span class="menuToggle mi material-symbols-outlined">menu</span>
+            </section>
+            
+            <!-- ADD SYMBOLS FOR ACCOUNT AND CART -->
+            <section>    
+                <a href="D_account.html"><span class="mi material-symbols-outlined">account_circle</span></a>
+                <a href="E_cart.html"><span class="mi material-symbols-outlined">shopping_cart</span></a>
+            </section>
+        </header>
+        
+        <!-- MENU WITH DROPDOWNS -->
+        <nav>
+            <ul class="menuItems">
+                <li><a href="../index.html" class="bgLGray">Home</a></li>
+                <li class="dropDown">
+                    <a href="A_shop.html" class="bgGreen">Shop</a>
+                    <ul class="dropDownMenu">
+                        <li><a href="B_shop_home_prod.html" class="menuItem">Home Products</a></li>
+                        <li><a href="Under_construction.html">Body Products</a></li>
+                        <li><a href="Under_construction.html">Chocolates</a></li>
+                        <li><a href="Under_construction.html">Specials</a></li>
+                        <li><a href="Under_construction.html">Favorites</a></li>
+                        <li><a href="Under_construction.html">Shop All</a></li>
+                    </ul>
+                </li>
+                <li><a href="F_about.html" class="bgOrange">About</a></li>
+                <li><a href="G_blog.html" class="bgPink">ALL-ONE Blog</a></li>
+                <li><a href="H_contact.html" class="bgRust">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <!-- FAQs MAIN **************************************** -->
+        
+        <main class="faqMain">
+            <h2 class="fullWidth">Frequently Asked Questions</h2>
+            <section class="faqCat">
+                <figure class="prodImg">
+                    <a href="#goToHome"><img src="../images/item_prod_house.png" alt="liquid soap gallon"></a>
+                    <figcaption><a href="#goToHome">HOME PRODUCTS</a></figcaption>
+                </figure>
+                <figure class="prodImg">
+                    <img src="../images/item_prod_body.png" alt="body products">
+                    <figcaption class="navfont3">BODY PRODUCTS</figcaption>
+                </figure>
+                <figure class="prodImg">
+                    <a href="#goToChoc"><img src="../images/item_prod_choc.png" alt="chocolate bar"></a>
+                    <figcaption><a href="#goToChoc">CHOCOLATES</a></figcaption>
+                </figure>
+                <figure class="prodImg">
+                    <img src="../images/item_prod_specials.png" alt="toothpaste">
+                    <figcaption class="navfont3">CERTIFICATIONS</figcaption>
+                </figure>
+                <figure class="prodImg">
+                    <a href="#goToSafe"><img src="../images/item_bar_soap.png" alt="bar soap"></a>
+                    <figcaption><a href="#goToSafe">SAFETY</a></figcaption>
+                </figure>           
+                <figure class="prodImg">
+                    <img src="../images/item_prod_all.png" alt="product tower">
+                    <figcaption class="navfont3">SHIPPING/ RETURNS</figcaption>
+                </figure>
+            </section>           
+            
+            <!-- HOUSE PRODUCTS -->
+            <section class="container" id="goToHome">
+            <h2>House Products</h2>
+            <div class="accordion" >
+                <div class="accordion-item">
+                    <button id="accordion-button-1" aria-expanded="false">
+                        <span class="accordion-title">What are the "18-in-1" uses?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>You can use Dr. Bronner’s soaps for washing your face, body, hands and hair, for bathing, shaving, brushing your teeth, rinsing fruit, aromatherapy, washing dishes by hand, doing laundry, mopping floors, all-purpose cleaning, washing windows, scrubbing toilets, washing dogs, controlling dust mites, ants and aphids. Now, that’s eighteen uses right there, but customers have told us over time about many more uses they have found for our soaps. Let us know what else you use our soaps for! 
+                        </p>
+                        <p>
+                        To get you started with recipes and dilutions, check out Lisa Bronner’s “Liquid Soaps Dilutions Cheat Sheet .”
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-2" aria-expanded="false">
+                        <span class="accordion-title">What does "castile" mean? What is the difference between your liquid and bar soap? 
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>In earlier centuries, an all-vegetable-based soap was made in the Castile region of Spain from local olive oil. By the turn of this century, “Castile” had come to mean any vegetable oil-based soap, as distinct from animal (tallow) fat-based soap. “Pure-Castile” is now also your guarantee that what you are using is a genuinely ecological and simple soap – not a complex blend of detergents with higher ecological impact and slower biodegradability. Unfortunately, many synthetic detergent blends are deceptively labeled as “liquid soap” despite the fact that they contain absolutely no real soap whatsoever.
+                        </p>
+                        <p>
+                        Dr. Bronner’s Pure-Castile Liquid and Bar Soaps are both completely vegetable oil-based. The difference between the liquid and bar soaps is that the liquid soaps use potassium hydroxide to saponify the vegetable oils, while the hard bar soaps use sodium hydroxide instead.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-3" aria-expanded="false">
+                        <span class="accordion-title">Do your soaps contain any foaming agents or detergents like Sodium Lauryl Sulfate?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely not. Dr. Bronner’s soaps are 100% true pure-castile soaps. The high-foaming lather comes from their high coconut oil content, which creates a more luxurious and richer lather than any detergent could ever produce. “Pure-Castile” is your guarantee that what you’re using is a genuinely ecological and simple soap – not a complex blend of detergents with a higher environmental impact due to the waste stream created during manufacturing and the detergents’ slower biodegradability. Unfortunately, many synthetic detergent blends are deceptively labeled as “Liquid Soap” even though they contain no real soap whatsoever. 
+                        </p>
+                        <p>
+                        We do have one product, Sal Suds, which contains Sodium Lauryl Sulfate, Coco-Betaine, and Lauryl Glucoside. Sal Suds is an all-purpose household cleaning product, and is not intended for use on the body. Cruelty-free and biodegradable, It is a balanced formulation of naturally derived surfactants that are mild and gentle on the hands.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-4" aria-expanded="false">
+                        <span class="accordion-title">I'm getting a burning sensation from using your Peppermint Soap. Is that normal?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>It’s not common (most experience a “tingly cool” feeling from the menthol) but some people have told us they feel a burning sensation, especially over sensitive areas. Unfortunately, there isn’t much to be done in this case and our only recommendation is to switch to one of our other scents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <!-- CHOCOLATES -->
+            <section class="container" id="goToChoc">
+            <h2>Chocolate</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button id="accordion-button-5" aria-expanded="false">
+                        <span class="accordion-title">Will Dr. Bronner's chocolate compromise Dr. Bronner's nut-free operations?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Dr. Bronner’s Magic All-One Chocolate is manufactured, stored and shipped completely separately from all our soaps and other product lines.
+                        </p>
+                        <p>Apart from our Magic All-One Chocolate, all of Dr. Bronner’s products are produced and packaged in facilities that are peanut free.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-6" aria-expanded="false">
+                        <span class="accordion-title">Why is Dr Bronner's chocolate considered "magic"?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Dr. Bronner’s Magic All-One Chocolate—certified organic, fair trade and vegan—combines the integrity of Dr. Bronner’s industry-leading socially and environmentally responsible supply chain with the expertise of Swiss chocolatiers—and we call that Magic!
+                        </p>
+                        <p>Perfectly balanced ingredients, enhanced with the subtle sweetness of coconut sugar, let our chocolate’s rich cocoa flavor shine and linger, while regenerative organic farming practices have lasting positive impacts on farmers, their communities and the land they tend.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-7" aria-expanded="false">
+                        <span class="accordion-title">Is Dr. Bronner's chocolate vegan?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! All Dr. Bronner’s Magic All-One Chocolate flavors are vegan, organic, fair trade and kosher.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-8" aria-expanded="false">
+                        <span class="accordion-title">Is Dr. Bronner's chocolate organic?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! All of Dr. Bronner’s Magic All-One Chocolate flavors are organic, fair trade, vegan, and kosher.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-9" aria-expanded="false">
+                        <span class="accordion-title">Where is your chocolate made?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Our chocolate is made in Switzerland by award-winning chocolatiers who have been honing their craft for over 160 years. We searched high and low for the right chocolate manufacturing partners who share our values, produce amazing chocolate, and are as excited as we are to deliver the most delicious chocolate made with coconut sugar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </section>
+            
+            <!-- SAFTY -->
+            <section class="container" id="goToSafe">
+            <h2>Safety</h2>
+            <div class="accordion">                 
+                <div class="accordion-item">
+                    <button id="accordion-button-10" aria-expanded="false">
+                        <span class="accordion-title">What's the shelf life of your products? How can I tell when they were made?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>In general, we recommend using Dr. Bronner’s body care products within three years of the manufacture date. Soaps are self-preserving, but because our products are biodegradable, it’s best to not leave them on the shelf for too long. Also, the soaps are good for 24 months after opening the product, within that 3 year window.
+                        </p>
+                        <p>To find out when our personal care products were manufactured, you can consult the “lot code,” a number that appears printed or etched on the packaging, typically just below the label. We do not use expiration dates, instead we use Julian dates. The first digits refers to the year (i.e., “17” is 2017, “20” is 2020, etc.), while the next three digits refer to the day of the year out of 365 total days. So if the first five digits of a lot code are “17165,” the product was manufactured in 2017 on the 165th day of that year (June 14th). You can always search for a Julian date calendar for the specific year that your bottle was manufactured in online.
+                        </p>
+                        <p>or easy reference, our Fair Trade & Organic Virgin Coconut Oils (VCOs) are labeled with a “Best By” date next to the lot code. Due to space limitations, we use a different system to code our Organic Lip Balms.         
+                        </p>
+                    </div>
+                </div> 
+                <div class="accordion-item">
+                    <button id="accordion-button-11" aria-expanded="false">
+                        <span class="accordion-title">Do your soaps contain any foaming agents or detergents like Sodium Lauryl Sulfate?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely not. Dr. Bronner’s soaps are 100% true pure-castile soaps. The high-foaming lather comes from their high coconut oil content, which creates a more luxurious and richer lather than any detergent could ever produce. “Pure-Castile” is your guarantee that what you’re using is a genuinely ecological and simple soap – not a complex blend of detergents with a higher environmental impact due to the waste stream created during manufacturing and the detergents’ slower biodegradability. Unfortunately, many synthetic detergent blends are deceptively labeled as “Liquid Soap” even though they contain no real soap whatsoever. 
+                        </p>
+                        <p>
+                        We do have one product, Sal Suds, which contains Sodium Lauryl Sulfate, Coco-Betaine, and Lauryl Glucoside. Sal Suds is an all-purpose household cleaning product, and is not intended for use on the body. Cruelty-free and biodegradable, It is a balanced formulation of naturally derived surfactants that are mild and gentle on the hands.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button id="accordion-button-12" aria-expanded="false">
+                        <span class="accordion-title">I'm getting a burning sensation from using your Peppermint Soap. Is that normal?
+                        </span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>It’s not common (most experience a “tingly cool” feeling from the menthol) but some people have told us they feel a burning sensation, especially over sensitive areas. Unfortunately, there isn’t much to be done in this case and our only recommendation is to switch to one of our other scents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </main>
+             
+ 
+        <!-- FOOTER -->
+        <footer>
+            <p>      
+               <a href="#"><img src="../images/icon_facebook.png" alt="facebook icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_twitter.png" alt="twitter icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_instagram.png" alt="instagram icon" class="medIcons"></a>
+            </p>    
+            <section class="footflex">
+                <p>FAQs</p>
+                <!-- ADD SYMBOL TO SCROLL TO TOP -->
+                <p><a href="#pageTop"><span class="mi material-symbols-outlined">assistant_navigation</span></a></p>
+            </section>         
+        </footer>
+        
+        <footer class="foot2">
+            <p>&copy; 2023 | Dr. Bronner's Magic Soaps</p>
+            <p>Questions? Email us at <a href="mailto:info@drbronner.com" target="_blank">info@drbronner.com</a></p>
+        </footer> 
+        
+        <!-- jQUERY FOR ACCORDION STYLE EFFECT -->
+        <script src="../js/script.js"></script>
+    </body>
+</html>
+     

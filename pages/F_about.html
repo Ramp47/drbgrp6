@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dr. Bronner's Website Redesign</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- CSS RESET-->
+        <link href="../css/reset.css" type="text/css" rel="stylesheet">
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        
+        <!-- CSS -->
+        <link href="../css/style2.css" type="text/css" rel="stylesheet">
+        
+        <!-- jQUERY -->
+        <script src="../js/jquery-3.6.3.min.js"></script>
+        
+        <!-- jQUERY TOGGLE HAMBURGER MENU -->
+        <script>               
+        $(document).ready(function() {
+//            $('.menuItems').hide();
+            $('.menuToggle').click(function(){
+                $('.menuItems').toggle();
+            });
+            $(window).resize( function(){
+                $('.menuItems').show();
+            });
+        });
+        </script>
+    </head>
+
+    <body id="pageTop">
+
+        <!-- HEADER SECTION ********************************** -->
+        <header class="headerTop">
+            <section>
+                <a href="../index.html"><img src="../images/drbronners-logo-white.png" alt="dr bronner white logo"> </a> 
+                <span class="menuToggle mi material-symbols-outlined">menu</span>
+            </section>
+            
+            <!-- ADD SYMBOLS FOR ACCOUNT AND CART -->
+            <section>    
+                <a href="D_account.html"><span class="mi material-symbols-outlined">account_circle</span></a>
+                <a href="E_cart.html"><span class="mi material-symbols-outlined">shopping_cart</span></a>
+            </section>
+        </header>
+        
+        <!-- MENU WITH DROPDOWNS -->
+        <nav>
+            <ul class="menuItems">
+                <li><a href="../index.html" class="bgLGray">Home</a></li>
+                <li class="dropDown">
+                    <a href="A_shop.html" class="bgGreen">Shop</a>
+                    <ul class="dropDownMenu">
+                        <li><a href="B_shop_home_prod.html" class="menuItem">Home Products</a></li>
+                        <li><a href="Under_construction.html">Body Products</a></li>
+                        <li><a href="Under_construction.html">Chocolates</a></li>
+                        <li><a href="Under_construction.html">Specials</a></li>
+                        <li><a href="Under_construction.html">Favorites</a></li>
+                        <li><a href="Under_construction.html">Shop All</a></li>
+                    </ul>
+                </li>
+                <li class="navfont2 bgOrange">About</li>
+                <li><a href="G_blog.html" class="bgPink">ALL-ONE Blog</a></li>
+                <li><a href="H_contact.html" class="bgRust">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <!-- ABOUT PAGE CONTENT **************************************** -->
+        
+        <!-- 6 SECTIONS WITH PRINCIPLE -->  
+    	<main id=aboutPage>
+    		<section id=aboutTop>
+    		   <section id=aboutTopText>
+               <h2 class="heroH2">Our Cosmic Principles</h2>
+               <h3 class=heroH3>defines our most important relationships, and guide us in everything we do from soapmaking to peacemaking. All-One!</h3>
+					<p>Learn how we put our principles into practice <a href="">read the 2022 All-One! report &gt;&gt;</a></p> 
+				</section>
+			</section>
+		
+   			<section id=allPrinciples>
+				<article class=principle>
+					<h3>Ourselves</h3>
+    				<h1>1</h1>
+    				<h2>Work hard! Grow!</h2>
+    				<img src="../images/img_principle1.jpg" alt="our refinery">
+    				<p>Number one in Dr. Bronner’s Moral ABC: Work hard! Prosper! Learn, grow, improve. Success is the engine that makes everything else possible.</p><p><a href="">Read more &gt;&gt;</a></p>
+				</article>
+				
+				<article class=principle>
+					<h3>Our customers</h3>
+    				<h1>2</h1>
+    				<h2>Do right by customers</h2>
+    				<img src="../images/img_principle2.jpg" alt="our products">
+    				<p>First ingredient: love! Lead with heart, take time, give best—serve customers as you would serve mother-daughter-son.</p><p><a href="">Read more &gt;&gt;</a></p>
+				</article>
+  				
+   				<article class=principle>
+   					<h3>Our employees</h3>
+    				<h1>3</h1>
+    				<h2>Treat employees like family</h2>
+    				<img src="../images/img_principle3.jpg" alt="our employees">
+    				<p>Be kind, reward generously, support good and healthy living. Seek and encourage the best in one another. For whatever unites us is greater than whatever divides us!</p><p><a href="">Read more &gt;&gt;</a></p>
+   				</article>
+   				
+				<article class=principle>
+					<h3>Our suppliers</h3>
+    				<h1>4</h1>
+    				<h2>Be fair to suppliers</h2>
+    				<img src="../images/img_principle4.jpg" alt="our supplies">
+    				<p>Build relationships with organic farmers and producers to create equitable supply chains. Fair prices and living wages and excellent working conditions for workers, investment in communities, respect for land and people!</p><p><a href="">Read more &gt;&gt;</a></p>
+				</article>
+  				
+   				<article class=principle>
+   					<h3>Our earth</h3>
+    				<h1>5</h1>
+    				<h2>Treath the earth like home</h2>
+    				<img src="../images/img_principle5.jpg" alt="our earth">
+    				<p>Make humble and mindful use of the earth’s gifts. Do not waste, do not harm the land or people or animals. </p><p><a href="">Read more &gt;&gt;</a></p>
+   				</article>
+   				
+				<article class=principle>
+					<h3>Our community</h3>
+    				<h1>6</h1>
+    				<h2>Fund & fight for what's right!</h2>
+    				<img src="../images/img_principle6.jpg" alt="our community">
+    				<p>Be an engine for positive change—share profits, share talent, share muscle, share voice—give & give, fund & fight!</p><p><a href="">Read more &gt;&gt;</a></p>
+				</article>
+
+			</section>
+    	</main>
+    	
+    	<aside class="goToPage">
+			<p><a href="../pages/full_blog.html">Explore All-One Blog &gt;&gt;</a></p>
+     	</aside>     
+        
+        <!-- FOOTER -->
+        <footer>
+            <p>      
+               <a href="#"><img src="../images/icon_facebook.png" alt="facebook icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_twitter.png" alt="twitter icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_instagram.png" alt="instagram icon" class="medIcons"></a>
+            </p>    
+            <div class="footflex">
+                <p><a href="I_faq.html">FAQs</a></p>
+                <!-- ADD SYMBOL TO SCROLL TO TOP -->
+                <p><a href="#pageTop"><span class="mi material-symbols-outlined">assistant_navigation</span></a></p>
+            </div>         
+        </footer>
+        
+        <footer class="foot2">
+            <p>&copy; 2023 | Dr. Bronner's Magic Soaps</p>
+            <p>Questions? Email us at <a href="mailto:info@drbronner.com" target="_blank">info@drbronner.com</a></p>
+        </footer>        
+    </body>
+</html>
+        

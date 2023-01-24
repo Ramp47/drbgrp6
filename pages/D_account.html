@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dr. Bronner's Website Redesign</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- CSS RESET-->
+        <link href="../css/reset.css" type="text/css" rel="stylesheet">
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        
+        <!-- CSS -->
+        <link href="../css/style.css" type="text/css" rel="stylesheet">
+        
+        <!-- jQUERY -->
+        <script src="../js/jquery-3.6.3.min.js"></script>
+        
+        <!-- jQUERY TOGGLE HAMBURGER MENU -->
+        <script>               
+        $(document).ready(function() {
+//            $('.menuItems').hide();
+            $('.menuToggle').click(function(){
+                $('.menuItems').toggle();
+            });
+            $(window).resize( function(){
+                $('.menuItems').show();
+            });
+        });
+        </script>
+    </head>
+
+    <body id="pageTop">
+
+        <!-- HEADER SECTION ********************************** -->
+        <header class="headerTop">
+            <section>
+                <a href="../index.html"><img src="../images/drbronners-logo-white.png" alt="dr bronner white logo"> </a> 
+                <span class="menuToggle mi material-symbols-outlined">menu</span>
+            </section>
+            
+            <!-- ADD SYMBOLS FOR ACCOUNT AND CART -->
+            <section>    
+                <span class="mi material-symbols-outlined">account_circle</span>
+                <a href="E_cart.html"><span class="mi material-symbols-outlined">shopping_cart</span></a>
+            </section>
+        </header>
+        
+        <!-- MENU WITH DROPDOWNS -->
+        <nav>
+            <ul class="menuItems">
+                <li><a href="../index.html" class="bgLGray">Home</a></li>
+                <li class="dropDown">
+                    <a href="A_shop.html" class="bgGreen">Shop</a>
+                    <ul class="dropDownMenu">
+                        <li><a href="B_shop_home_prod.html" class="menuItem">Home Products</a></li>
+                        <li><a href="Under_construction.html">Body Products</a></li>
+                        <li><a href="Under_construction.html">Chocolates</a></li>
+                        <li><a href="Under_construction.html">Specials</a></li>
+                        <li><a href="Under_construction.html">Favorites</a></li>
+                        <li><a href="Under_construction.html">Shop All</a></li>
+                    </ul>
+                </li>
+                <li><a href="F_about.html" class="bgOrange">About</a></li>
+                <li><a href="G_blog.html" class="bgPink">ALL-ONE Blog</a></li>
+                <li><a href="H_contact.html" class="bgRust">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+       
+        <main>
+            <h1 class="fullWidth">My Account</h1>
+            
+            <form action="#" method="post" id="saveForm" class="formFlex" enctype="text/plain"> 
+            
+                <fieldset class="acctFieldset acctFieldset1">
+                    <legend class="heroH2">Log In</legend>
+                    <h3>For RETURNING customers</h3>
+
+                    <ul class="acctFields acctFields1">
+                        <li class="span2">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </li>
+                        <li class="span2b">
+                        <label for="pwd">Password</label>
+                        <input type="password" id="pwd" name="password" placeholder="Enter your password" required>
+                        </li>
+                        <li class="span4">
+                        <input type="submit" id="submit" value="Log me in!" class="button">
+                        </li>
+                    </ul>                    
+                </fieldset>
+                
+                <p class="heroH2 fullWidth or"> OR </p>
+                
+                <fieldset class="acctFieldset acctFieldset2">
+                    <legend class="heroH2">Sign Up</legend>
+                    <h3>For NEW customers</h3>
+
+                    <ul class="acctFields acctFields2">
+                        <li class="span2">
+                        <label for="email1">Email *</label>
+                        <input type="email" id="email1" name="email" placeholder="Enter your email" required>
+                        </li>
+                        <li class="span2b">
+                        <label for="pwd1">Password *</label>
+                        <input type="password" id="pwd1" name="password" placeholder="Enter your password" required>
+                        </li>
+                     </ul>          
+                    
+                    <hr>
+                        
+                    <ul class="acctFields acctFields2">
+                        <li class="span4">
+                            <label for="fname">First Name *</label>
+                            <input type="text" id="fname" name="fname" required>
+                        </li>
+                        <li class="span4">
+                            <label for="lname">Last Name *</label>
+                            <input type="text" id="lname" name="lname" required>
+                        </li>
+                        <li class="span4">
+                            <label for="address1">Address *</label>
+                            <input type="text" id="address1" name="address1" placeholder="Enter an address" required>
+                        </li>
+                        <li class="span4">
+                            <label for="address2">Address 2</label>
+                            <input type="text" id="address2" name="address2" placeholder="Apt Number">
+                        </li>
+                        <li class="span2">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" placeholder="City" required>
+                        </li>
+                        <li class="span1">
+                            <label for="state">State *</label>
+                            <input type="text" maxlength="2" id="state" name="state" placeholder="State" required title="Two letter abbreviation">
+                        </li>
+                        <li class="span1">
+                            <label for="zipCode">Zip Code *</label>     
+                            <input type="text" pattern="[0-9]{5}" id="zipCode" name="zip_code" placeholder="Zip Code" required title="Five digit zip code">
+                        </li>
+                        <li class="span2">
+                            <label for="phone">Telephone</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
+                        </li>
+          
+                        <li class="span4">
+                        <input type="submit" id="submit1" value="Sign me up!" class="button">
+                        </li>
+                    </ul>                    
+                </fieldset>
+            </form>
+        </main>
+                
+        <!-- FOOTER -->
+        <footer>
+            <p>      
+               <a href="#"><img src="../images/icon_facebook.png" alt="facebook icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_twitter.png" alt="twitter icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_instagram.png" alt="instagram icon" class="medIcons"></a>
+            </p>    
+            <section class="footflex">
+                <p><a href="I_faq.html">FAQs</a></p>
+                <!-- ADD SYMBOL TO SCROLL TO TOP -->
+                <p><a href="#pageTop"><span class="mi material-symbols-outlined">assistant_navigation</span></a></p>
+            </section>         
+        </footer>
+        
+        <footer class="foot2">
+            <p>&copy; 2023 | Dr. Bronner's Magic Soaps</p>
+            <p>Questions? Email us at <a href="mailto:info@drbronner.com" target="_blank">info@drbronner.com</a></p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dr. Bronner's Website Redesign</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- CSS RESET-->
+        <link href="../css/reset.css" type="text/css" rel="stylesheet">
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        
+        <!-- CSS -->
+        <link href="../css/style.css" type="text/css" rel="stylesheet">
+        
+        <!-- jQUERY -->
+        <script src="../js/jquery-3.6.3.min.js"></script>
+        
+        <!-- jQUERY TOGGLE HAMBURGER MENU -->
+        <script>               
+        $(document).ready(function() {
+//            $('.menuItems').hide();
+            $('.menuToggle').click(function(){
+                $('.menuItems').toggle();
+            });
+            $(window).resize( function(){
+                $('.menuItems').show();
+            });
+        });
+        </script>
+    </head>
+
+    <body id="pageTop">
+
+        <!-- HEADER SECTION ********************************** -->
+        <header class="headerTop">
+            <section>
+                <a href="../index.html"><img src="../images/drbronners-logo-white.png" alt="dr bronner white logo"> </a> 
+                <span class="menuToggle mi material-symbols-outlined">menu</span>
+            </section>
+            
+            <!-- ADD SYMBOLS FOR ACCOUNT AND CART -->
+            <section>    
+                <a href="D_account.html"><span class="mi material-symbols-outlined">account_circle</span></a>
+                <a href="E_cart.html"><span class="mi material-symbols-outlined">shopping_cart</span></a>
+            </section>
+        </header>
+        
+        <!-- MENU WITH DROPDOWNS -->
+        <nav>
+            <ul class="menuItems">
+                <li><a href="../index.html" class="bgLGray">Home</a></li>
+                <li class="dropDown">
+                    <a href="A_shop.html" class="bgGreen">Shop</a>
+                    <ul class="dropDownMenu">
+                        <li><a href="B_shop_home_prod.html" class="menuItem">Home Products</a></li>
+                        <li><a href="Under_construction.html">Body Products</a></li>
+                        <li><a href="Under_construction.html">Chocolates</a></li>
+                        <li><a href="Under_construction.html">Specials</a></li>
+                        <li><a href="Under_construction.html">Favorites</a></li>
+                        <li><a href="Under_construction.html">Shop All</a></li>
+                    </ul>
+                </li>
+                <li><a href="F_about.html" class="bgOrange">About</a></li>
+                <li><a href="G_blog.html" class="bgPink">ALL-ONE Blog</a></li>
+                <li class="navfont2 bgRust">Contact Us</li>
+            </ul>
+        </nav>
+        
+        <!-- CONTACT FORM **************************************** -->
+        <main class="contMain">
+            <form>
+            <fieldset class="contFieldset">
+                <legend class="heroH2">Contact Us</legend>
+                
+                <section>
+                <ul class="contFields">
+                    <li>
+                        <label for="fname">First Name *</label>
+                        <input type="text" id="fname" name="fname" required>
+                    </li>
+                    <li>
+                        <label for="lname">Last Name *</label>
+                        <input type="text" id="lname" name="lname" required>
+                    </li>
+                    <li>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </li>
+                    <li>
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####">
+                    </li>
+                </ul>
+                </section>
+                
+                <section class="contSect2">
+                <ul class="contFields">
+                    <li>
+                        <label for="inquiry">Inquiry Type</label>
+                        <select id="inquiry" name="inquiry">
+                            <option value="">Select one</option>
+                            <option value="order">Order inquiry</option>
+                            <option value="product">Product inquiry</option>
+                            <option value="other">Other inquiry</option>
+                        </select>  
+                    </li>
+                    <li>
+                        <label for="order">Order Confirmation Number</label>
+                        <input type="text" id="order" name="order">
+                    </li>
+                </ul>                     
+                        
+                <h3>Product Category (Check all that applies)</h3> 
+                <ul class="choices contFlex">        
+                        <li>
+                            <input type="checkbox" id="c1" name="product">
+                            <label for="c1">Home Care</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c2" name="product">
+                            <label for="c2">Body Care</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c3" name="product">
+                            <label for="c3">Chocolate</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c4" name="product">
+                            <label for="c4">Other</label>  
+                        </li>
+                </ul>
+                
+                <ul class="contFields">
+                    <li>
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </li>
+                    <li>
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="10" required></textarea>
+                    </li>
+                </ul>             
+
+                <h3>Subscribe to our newsletter</h3>
+                <ul class="choices contFlex">        
+                        <li>
+                            <input type="radio" name="newsletter" id="yes">
+                            <label for="yes">Yes</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="newsletter" id="no">
+                            <label for="no">No</label>
+                        </li>
+                </ul>  
+
+                <ul class="contFields">
+                    <li class="span4">
+                        <input type="submit" id="submit" value="Submit" class="button">
+                    </li>
+                </ul>
+                </section>
+                
+                </fieldset>
+            </form>        
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>      
+               <a href="#"><img src="../images/icon_facebook.png" alt="facebook icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_twitter.png" alt="twitter icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_instagram.png" alt="instagram icon" class="medIcons"></a>
+            </p>    
+            <section class="footflex">
+                <p><a href="I_faq.html">FAQs</a></p>
+                <!-- ADD SYMBOL TO SCROLL TO TOP -->
+                <p><a href="#pageTop"><span class="mi material-symbols-outlined">assistant_navigation</span></a></p>
+            </section>         
+        </footer>
+        
+        <footer class="foot2">
+            <p>&copy; 2023 | Dr. Bronner's Magic Soaps</p>
+            <p>Questions? Email us at <a href="mailto:info@drbronner.com" target="_blank">info@drbronner.com</a></p>
+        </footer>        
+    </body>
+</html>
+     
+  

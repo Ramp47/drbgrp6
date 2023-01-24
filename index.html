@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dr. Bronner's Website Redesign</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="css/reset.css" type="text/css" rel="stylesheet">
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+       
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        
+        <script src="js/jquery-3.6.3.min.js"></script>
+        
+        <!-- TOGGLE HAMBURGER MENU       -->
+        <script>               
+        $(document).ready(function() {
+//            $('.menuItems').hide();
+            $('.menuToggle').click(function(){
+                $('.menuItems').toggle();
+            });
+            $(window).resize( function(){
+                $('.menuItems').show();
+            });
+        });
+        </script>
+        
+    </head>
+
+    <body id="pageTop">
+       
+        <!-- HEADER SECTION ********************************** -->
+        <header class="headerTop">
+            <section>
+                <img src="images/drbronners-logo-white.png" alt="dr bronner white logo"> 
+                <span class="menuToggle mi material-symbols-outlined">menu</span>
+            </section>
+            
+            <!-- ADD SYMBOLS FOR ACCOUNT AND CART -->
+            <section>    
+                <a href="pages/D_account.html"><span class="mi material-symbols-outlined">account_circle</span></a>
+                <a href="pages/E_cart.html"><span class="mi material-symbols-outlined">shopping_cart</span></a>
+            </section>
+        </header>
+        
+        <!-- MENU WITH DROPDOWNS -->
+        <nav>
+            <ul class="menuItems">
+                <li class="bgLGray navfont">Home</li>
+                <li class="dropDown">
+                    <a href="pages/A_shop.html" class="bgGreen">Shop</a>
+                    <ul class="dropDownMenu">
+                        <li><a href="pages/B_shop_home_prod.html" class="menuItem">Home Products</a></li>
+                        <li><a href="pages/Under_construction.html">Body Products</a></li>
+                        <li><a href="pages/Under_construction.html">Chocolates</a></li>
+                        <li><a href="pages/Under_construction.html">Specials</a></li>
+                        <li><a href="pages/Under_construction.html">Favorites</a></li>
+                        <li><a href="pages/Under_construction.html">Shop All</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/F_about.html" class="bgOrange">About</a></li>
+                <li><a href="pages/G_blog.html" class="bgPink">ALL-ONE Blog</a></li>
+                <li><a href="pages/H_contact.html" class="bgRust">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <!-- HERO SECTION WITH CALL TO ACTION BUTTONS -->
+        <section class="sectionHero">   
+            <h1 class="heroHeading heroH1">Dr. Bronner's</h1>
+            <h3 class="heroHeading heroH3">Top-selling soap in the U.S. natural marketplace!</h3>
+            <p><a href="pages/A_shop.html" class="button">Shop now!</a></p>
+                              
+            <p class="pStars">
+                <a href="pages/C_shop_lsoap.html"><img src="images/Star_18.png" alt="18 in 1 soap" class="stars"></a>
+                <a href="pages/Under_construction.html"><img src="images/Star_15.png" alt="15% off star" class="stars"></a>
+            </p>
+                
+            <h2 class="heroHeading heroH2">We are all-one!</h2>
+            <!-- <h3 class="heroHeading heroH3">From soapmaking to peacemaking</h3> -->
+            <!-- <h3 class="heroHeading heroH3"><a href="#">Learn more &gt;&gt;</a></h3>              -->
+            <h3 class="heroHeading heroH3">In all we do, let us be generous, fair and loving to Spaceship Earth and all of its inhabitants</h3> 
+        </section>  
+             
+        <main>
+           
+            <!-- FEATURED PRODUCTS ************************** -->
+            <section class="feaProducts">
+                <h1 class="fullWidth">Featured Products</h1>  
+                
+                <article class="feaChocolate">   
+                    <h2 class="bigCaps">Magic All-One Chocolates</h2>    
+                    <figure>
+                        <a href="pages/Under_construction.html"><img src="images/item_chocolates.png" alt="chocolate pack"></a>
+                        <figcaption>Buy one variety pack, get one variety pack <a href="pages/Under_construction.html">FREE &gt;&gt;</a></figcaption>
+                    </figure>
+                    <p>Vegan, gluten-free, delicious!</p> 
+                </article>
+                
+                <article class="feaChocolate">   
+                    <h2 class="bigCaps">Pumpkin Spice Chocolate Chunk Cookies</h2>
+                    <h3>with Magic All-One Chocolate</h3>                   
+                    <figure>
+                        <a href="pages/Under_construction.html"><img src="images/item_cookies.png" alt="pumpkin chocolate cookies"></a>
+                        <figcaption>What is it about pumpkin spice that we love so much? Perhaps its Magic is in the familiar taste and smell of cinnamon and nutmeg on a crisp fall morning. Something about the nostalgia of it all. </figcaption>
+                    </figure>
+                    <p>Get the <a href="pages/Under_construction.html">Recipe &gt;&gt;</a></p>
+                </article>
+            </section>
+            
+            <!-- RECOMMENDED PRODUCTS -->
+            <section class="recProducts">
+                <h1 class="fullWidth">Recommended Products</h1>  
+                <article class="prod">                   
+                    <figure class="prodImg">
+                        <a href="pages/C_shop_lsoap.html"><img src="images/item_liquid_soap.png" alt="liquid soap"></a>
+                        <figcaption><a href="pages/C_shop_lsoap.html">Pure-Castile Liquid Soap</a></figcaption>
+                    </figure> 
+                    
+                    <form action="#" method="post" id="saveCart1" enctype="text/plain">
+                        <ul>
+                            <li>
+                            <label for="lSoapSc">Scent</label>
+                            <select id="lSoapSc" name="lsoap_scent" >
+                               <option value="Peppermint">Peppermint</option>
+                               <option value="Baby unscented">Baby unscented</option>
+                               <option value="Lavender">Lavender</option>
+                               <option value="Almond">Almond</option>
+                               <option value="Citrus">Citrus</option>
+                               <option value="Tea tree">Tea tree</option>
+                               <option value="Rose">Rose</option>
+                               <option value="Eucalyptus">Eucalyptus</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="lSoapSz">Size</label>
+                            <select id="lSoapSz" name="lsoap_size" >
+                               <option value="2">2oz</option>
+                               <option value="4">4oz</option>
+                               <option value="8">8oz</option>
+                               <option value="16">16oz</option>
+                               <option value="32">32oz</option>
+                               <option value="64">1/2gal</option>
+                               <option value="128">1gal</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="lSoapNo">Quantity</label>
+                            <select id="lSoapNo" name="lsoap_num" >
+                               <option value="0">0</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <input type="submit" id="submit1" value="Add to Cart" class="button button2">
+                            </li>
+                        </ul>  
+                    </form>
+                </article>
+                
+                <article class="prod">                   
+                    <figure class="prodImg">
+                        <a href="pages/Under_construction.html"><img src="images/item_bar_soap.png" alt="bar soap"></a>
+                        <figcaption><a href="pages/Under_construction.html">Pure-Castile Bar Soap</a></figcaption>
+                    </figure> 
+                    
+                    <form action="#" method="post" id="saveCart2" enctype="text/plain">
+                        <ul>
+                            <li>
+                            <label for="bSoapSc">Scent</label>
+                            <select id="bSoapSc" name="bsoap_scent" >
+                               <option value="Almond">Almond</option>
+                               <option value="Peppermint">Peppermint</option>
+                               <option value="Baby unscented">Baby unscented</option>
+                               <option value="Lavender">Lavender</option>
+                               <option value="Citrus">Citrus</option>
+                               <option value="Tea tree">Tea tree</option>
+                               <option value="Rose">Rose</option>
+                               <option value="Eucalyptus">Eucalyptus</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="bSoapSz">Size</label>
+                            <select id="bSoapSz" name="bsoap_size" >
+                               <option value="5">5oz</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="bSoapNo">Quantity</label>
+                            <select id="bSoapNo" name="bsoap_num" >
+                               <option value="0">0</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <input type="submit" id="submit2" value="Add to Cart" class="button button2">
+                            </li>
+                        </ul>  
+                    </form>
+                </article>
+                
+                <article class="prod">                   
+                    <figure class="prodImg">
+                        <a href="pages/Under_construction.html"><img src="images/item_toothpaste.png" alt="toothpaste"></a>
+                        <figcaption><a href="pages/Under_construction.html">&nbsp;All-One Toothpaste&nbsp;</a></figcaption>
+                    </figure> 
+                    
+                    <form action="#" method="post" id="saveCart3" enctype="text/plain">
+                        <ul>
+                            <li>
+                            <label for="tpasteFlav">Scent</label>
+                            <select id="tpasteFlav" name="tpaste_flav" >
+                               <option value="Cinnamon">Cinnamon</option>
+                               <option value="Peppermint">Peppermint</option>
+                               <option value="Spearmint">Spearmint</option>
+                               <option value="Anise">Anise</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="tpasteSz">Size</label>
+                            <select id="tpasteSz" name="tpaste_size" >
+                               <option value="5">5oz</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="tpasteNo">Quantity</label>
+                            <select id="tpasteNo" name="tpaste_num" >
+                               <option value="0">0</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <input type="submit" id="submit3" value="Add to Cart" class="button button2">
+                            </li>
+                        </ul>  
+                    </form>
+                </article>
+                
+                <article class="prod">                   
+                    <figure class="prodImg">
+                        <a href="pages/Under_construction.html"><img src="images/item_chocolates_sm.png" alt="chocolate pack"></a>
+                        <figcaption><a href="pages/Under_construction.html">All-One Chocolate</a></figcaption>
+                    </figure> 
+                    
+                    <form action="#" method="post" id="saveCart4" enctype="text/plain">
+                        <ul>
+                            <li>
+                            <label for="chocFlav">Scent</label>
+                            <select id="chocFlav" name="choc_flav" >
+                               <option value="Variety">Variety Pack</option>
+                               <option value="Peppermint">Cool Peppermint</option>
+                               <option value="Dark">Salted Dark</option>
+                               <option value="Hazelnut">Whole Hazelnut</option>
+                               <option value="Hazelnut Butter">Hazelnut Butter</option>
+                               <option value="Almond">Whole Almond</option>
+                               <option value="Almond Butter">Almond Butter</option>
+                               <option value="Coconut">Coconut Praline</option>   
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="chocSz">Size</label>
+                            <select id="chocSz" name="choc_size" >
+                               <option value="3">3oz</option>
+                               <option value="6">6-pack</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="chocNo">Quantity</label>
+                            <select id="chocNo" name="choc_num" >
+                               <option value="0">0</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <input type="submit" id="submit4" value="Add to Cart" class="button button2">
+                            </li>
+                        </ul>  
+                    </form>
+                </article>
+            </section>
+                        
+            <!-- LATEST POSTS -->
+            <aside class="latePost">
+                <h1 class="fullWidth">Most-Read Posts</h1>
+                 
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="images/img_dilution.jpg" alt="soap dilution"></a>
+                        <figcaption><a href="#">Liquid Soap Dilution Cheat Sheet</a></figcaption>
+                    </figure>
+                    <p>Dilute! Dilute! OK! But how much? Here’s a quick reference. None of these soap dilutions are meant to be exact amounts. <a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+                
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="images/img_pet.jpg" alt="pet care"></a>
+                        <figcaption><a href="#">Pet Care with Dr. Bronner's</a></figcaption>
+                    </figure>
+                    <p>Washing pets with Dr. Bronner’s (not just for dogs!) If you haven’t seen Lisa Bronner’s video on how to wash your dog with Dr. Bronner’s, then we recommend you watch that first. <a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="images/img_regenerative.jpg" alt="regenerative cocoa"></a>
+                        <figcaption><a href="#">Dr. Bronner's Path to Regenerative Cocoa</a></figcaption>
+                    </figure>
+                    <p>The following post is an abridged excerpt from my book Honor Thy Label: Dr. Bronner’s Unconventional Journey to a Clean, Green, and Ethical Supply Chain. <a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+                   
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="images/img_bicycle.jpg" alt="bicycle cleaning"></a>
+                        <figcaption><a href="#">Clean Your Bicycle with Dr. Bronner's</a></figcaption>
+                    </figure>
+                    <p>Enjoy feeling the fun and freedom only bikes provide? I sure love to ride my hybrid road/mountain bike on my local cycleways. And I love to use Dr. Bronner’s to clean my gear. <a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+                
+            </aside>            
+        </main>
+        
+        <!-- FOOTER -->
+        <footer>
+            <p>      
+               <a href="#"><img src="images/icon_facebook.png" alt="facebook icon" class="medIcons"></a>
+               <a href="#"><img src="images/icon_twitter.png" alt="twitter icon" class="medIcons"></a>
+               <a href="#"><img src="images/icon_instagram.png" alt="instagram icon" class="medIcons"></a>
+            </p>    
+            <section class="footflex">
+                <p><a href="pages/I_faq.html">FAQs</a></p>
+                <!-- ADD SYMBOL TO SCROLL TO TOP -->
+                <p><a href="#pageTop"><span class="mi material-symbols-outlined">assistant_navigation</span></a></p>
+            </section>         
+        </footer>
+        
+        <footer class="foot2">
+            <p>&copy; 2023 | Dr. Bronner's Magic Soaps</p>
+            <p>Questions? Email us at <a href="mailto:info@drbronner.com" target="_blank">info@drbronner.com</a></p>
+        </footer>
+                     
+    </body>
+</html>
+
+
+
+    

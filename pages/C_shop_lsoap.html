@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dr. Bronner's Website Redesign</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- CSS LIGHTBOX AND RESET-->
+        <link href="../css/lightbox.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/reset.css" type="text/css" rel="stylesheet">
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        
+        <!-- CSS -->
+        <link href="../css/style.css" type="text/css" rel="stylesheet">
+        
+        <!-- jQUERY -->
+        <script src="../js/jquery-3.6.3.min.js"></script>
+        <script src="../js/lightbox.min.js"></script>
+        
+        <!-- jQUERY TOGGLE HAMBURGER MENU -->
+        <script>               
+        $(document).ready(function() {
+//            $('.menuItems').hide();
+            $('.menuToggle').click(function(){
+                $('.menuItems').toggle();
+            });
+            $(window).resize( function(){
+                $('.menuItems').show();
+            });
+        });
+        </script>
+        
+        <!-- jQUERY LIGHTBOX FOR PRODUCT IMAGES -->
+        <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'positionFromTop': 180,
+            'alwaysShowNavOnTouchDevices': true
+        });
+        </script>
+        
+    </head>
+
+    <body id="pageTop">
+
+        <!-- HEADER SECTION ********************************** -->
+        <header class="headerTop">
+            <section>
+                <a href="../index.html"><img src="../images/drbronners-logo-white.png" alt="dr bronner white logo"> </a> 
+                <span class="menuToggle mi material-symbols-outlined">menu</span>
+            </section>
+            
+            <!-- ADD SYMBOLS FOR ACCOUNT AND CART -->
+            <section>    
+                <a href="D_account.html"><span class="mi material-symbols-outlined">account_circle</span></a>
+                <a href="E_cart.html"><span class="mi material-symbols-outlined">shopping_cart</span></a>
+            </section>
+        </header>
+        
+        <!-- MENU WITH DROPDOWNS -->
+        <nav>
+            <ul class="menuItems">
+                <li><a href="../index.html" class="bgLGray">Home</a></li>
+                <li class="dropDown">
+                    <a href="A_shop.html" class="bgGreen">Shop</a>
+                    <ul class="dropDownMenu">
+                        <li><a href="B_shop_home_prod.html" class="menuItem">Home Products</a></li>
+                        <li><a href="Under_construction.html">Body Products</a></li>
+                        <li><a href="Under_construction.html">Chocolates</a></li>
+                        <li><a href="Under_construction.html">Specials</a></li>
+                        <li><a href="Under_construction.html">Favorites</a></li>
+                        <li><a href="Under_construction.html">Shop All</a></li>
+                    </ul>
+                </li>
+                <li><a href="F_about.html" class="bgOrange">About</a></li>
+                <li><a href="G_blog.html" class="bgPink">ALL-ONE Blog</a></li>
+                <li><a href="H_contact.html" class="bgRust">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <h1 class="fullWidth">Pure-Castile Liquid Soap</h1>
+            <h2 class="lsoapH2">The orignal 18-in-1 Soap!</h2>
+            
+            <!-- LIGHTBOX PRODUCT IMAGES -->
+            <ul class="lBox fullWidth">
+                <li><a href="../images/item_prod_lsoap1gal.jpg" data-lightbox="gallery1" data-title="Peppermint 1 Gallon"><img src="../images/item_prod_lsoap1gal.jpg" alt="liquid soap 1 gallon" class="lBoxImg"></a>
+                </li>
+                <li><a href="../images/item_prod_lsoap32oz.jpg" data-lightbox="gallery1" data-title="Almond 32oz"><img src="../images/item_prod_lsoap32oz.jpg" alt="liquid soap 32oz" class="lBoxImg"></a>
+                </li>
+                <li><a href="../images/item_prod_lsoap16oz.jpg" data-lightbox="gallery1" data-title="Citrus 16oz"><img src="../images/item_prod_lsoap16oz.jpg" alt="liquid soap 16oz" class="lBoxImg"></a>
+                </li>
+                <li><a href="../images/item_prod_lsoap2oz.jpg" data-lightbox="gallery1" data-title="Rose 2oz"><img src="../images/item_prod_lsoap2oz.jpg" alt="liquid soap 2oz" class="lBoxImg"></a>
+                </li>                         
+            </ul>
+            
+            <section class="prodGrid">
+            <article class="prod">
+                <form action="#" method="post" id="saveCart" enctype="text/plain">
+                        <ul>
+                            <li>
+                            <label for="lSoapSc">Scent</label>
+                            <select id="lSoapSc" name="lsoap_scent" class="detailSelect">
+                               <option value="Peppermint">Peppermint</option>
+                               <option value="Baby unscented">Baby unscented</option>
+                               <option value="Lavender">Lavender</option>
+                               <option value="Almond">Almond</option>
+                               <option value="Citrus">Citrus</option>
+                               <option value="Tea tree">Tea tree</option>
+                               <option value="Rose">Rose</option>
+                               <option value="Eucalyptus">Eucalyptus</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="lSoapSz">Size</label>
+                            <select id="lSoapSz" name="lsoap_size"  class="detailSelect">
+                               <option value="2">2oz</option>
+                               <option value="4">4oz</option>
+                               <option value="8">8oz</option>
+                               <option value="16">16oz</option>
+                               <option value="32">32oz</option>
+                               <option value="64">1/2gal</option>
+                               <option value="128">1gal</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <label for="lSoapNo">Quantity</label>
+                            <select id="lSoapNo" name="lsoap_num"  class="detailSelect">
+                               <option value="0">0</option>
+                               <option value="1">1</option>
+                               <option value="2">2</option>
+                               <option value="3">3</option>
+                            </select> 
+                            </li>
+                            <li>
+                            <input type="submit" id="submit1" value="Add to Cart" class="button button2">
+                            </li>
+                        </ul>  
+                    </form>
+            </article>
+            <article>
+                <h2>Details</h2>
+                <p>
+                Dr. Bronner’s 18-in-1 Pure-Castile Soaps are good for just about any cleaning task. Face, body, hair & dishes, laundry, mopping, pets—clean your house and body with no synthetic preservatives, detergents or foaming agents—none! Dilute! Dilute! OK!!
+                </p> 
+                <p>
+                Ingredients: Water, Organic Coconut Oil*, Potassium Hydroxide**, Organic Palm Kernel Oil*, Organic Olive Oil*, Organic Hemp Seed Oil, Organic Jojoba Oil, Citric Acid, Tocopherol <br>
+                *Certified Fair Trade Ingredients <br>
+                **None remains after saponifying oils into soap & glycerin.   
+                </p>                                                         
+            </article>
+            </section>
+        </main>
+        
+        <!-- FOOTER -->
+        <footer>
+            <p>      
+               <a href="#"><img src="../images/icon_facebook.png" alt="facebook icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_twitter.png" alt="twitter icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_instagram.png" alt="instagram icon" class="medIcons"></a>
+            </p>    
+            <section class="footflex">
+                <p><a href="I_faq.html">FAQs</a></p>
+                <!-- ADD SYMBOL TO SCROLL TO TOP -->
+                <p><a href="#pageTop"><span class="mi material-symbols-outlined">assistant_navigation</span></a></p>
+            </section>         
+        </footer>
+        
+        <footer class="foot2">
+            <p>&copy; 2023 | Dr. Bronner's Magic Soaps</p>
+            <p>Questions? Email us at <a href="mailto:info@drbronner.com" target="_blank">info@drbronner.com</a></p>
+        </footer>
+    </body>           
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dr. Bronner's Website Redesign</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- CSS RESET-->
+        <link href="../css/reset.css" type="text/css" rel="stylesheet">
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        
+        <!-- CSS -->
+        <link href="../css/style2.css" type="text/css" rel="stylesheet">
+        
+        <!-- jQUERY -->
+        <script src="../js/jquery-3.6.3.min.js"></script>
+        
+        <!-- jQUERY TOGGLE HAMBURGER MENU -->
+        <script>               
+        $(document).ready(function() {
+//            $('.menuItems').hide();
+            $('.menuToggle').click(function(){
+                $('.menuItems').toggle();
+            });
+            $(window).resize( function(){
+                $('.menuItems').show();
+            });
+        });
+        </script>
+    </head>
+
+    <body id="pageTop">
+
+        <!-- HEADER SECTION ********************************** -->
+        <header class="headerTop">
+            <section>
+                <a href="../index.html"><img src="../images/drbronners-logo-white.png" alt="dr bronner white logo"> </a> 
+                <span class="menuToggle mi material-symbols-outlined">menu</span>
+            </section>
+            
+            <!-- ADD SYMBOLS FOR ACCOUNT AND CART -->
+            <section>    
+                <a href="D_account.html"><span class="mi material-symbols-outlined">account_circle</span></a>
+                <a href="E_cart.html"><span class="mi material-symbols-outlined">shopping_cart</span></a>
+            </section>
+        </header>
+        
+        <!-- MENU WITH DROPDOWNS -->
+        <nav>
+            <ul class="menuItems">
+                <li><a href="../index.html" class="bgLGray">Home</a></li>
+                <li class="dropDown">
+                    <a href="A_shop.html" class="bgGreen">Shop</a>
+                    <ul class="dropDownMenu">
+                        <li><a href="B_shop_home_prod.html" class="menuItem">Home Products</a></li>
+                        <li><a href="Under_construction.html">Body Products</a></li>
+                        <li><a href="Under_construction.html">Chocolates</a></li>
+                        <li><a href="Under_construction.html">Specials</a></li>
+                        <li><a href="Under_construction.html">Favorites</a></li>
+                        <li><a href="Under_construction.html">Shop All</a></li>
+                    </ul>
+                </li>
+                <li><a href="F_about.html" class="bgOrange">About</a></li>
+                <li class="navfont2 bgPink">ALL-ONE Blog</li>
+                <li><a href="H_contact.html" class="bgRust">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <!-- BLOG PAGE CONTENT **************************************** -->
+        
+         	<!-- ASIDE NEWSLETTER SUBSCRIBE -->
+        <aside class="newsletter">
+        	<p>Be the first to see blog posts, product tips, promotions, announcements and more!</p>
+        	<form action="#" method="post" name="newsletterSub" id="newsletterSub" enctype="text/plain"> 
+           	<input type="email" id="email" placeholder="Your email address">  
+            <input type="submit" id="subscribe" name="subscribe" value="Subscribe" class="buttonSub">
+  			</form>      
+        </aside>
+        
+        <!-- TOP SECTION OF THE PAGE WITH 2 ASIDE SECTIONS -->
+        <section id="topBlog"> 
+        <!-- ASIDE SIDE NAV -->
+     	<aside class="sideNav">
+     		<h1 class="fullWidth">Topics</h1>
+     		<ul id="blogTopics">
+     			<li><a href="#">All-One!</a></li>
+     			<li><a href="#">Product Guides</a></li>
+     			<li><a href="#">DIY & Tips</a></li>
+     			<li><a href="#">Recipes</a></li>
+     			<li><a href="#">Activism</a></li>
+     			<li><a href="#">Fair Trade</a></li>
+     			<li><a href="#">Resources</a></li>
+     			<li><a href="#">Featured</a></li>
+			</ul>
+     			<form class="searchSubmit">
+     			<input class="searchSubmit" type="search" placeholder="Search by keyword">
+     			</form>	
+     	</aside>
+		
+		<aside class="highlight">
+        	<h1 class="fullWidth">Highlight</h1>
+                 
+            <article class="posts">   
+               <figure class="postImg">
+				   <a href="#"><img src="../images/img_blog_highlight_ski.jpg" alt="snow gear"></a>
+				   <figcaption><a href="#">Clean Your Snow Gear with Dr. Bronner's Sal Suds</a></figcaption>
+               </figure>
+               <p>Dr. Bronner’s Sal Suds Cleaner is an excellent, environmentally-friendly tool that works great on prepping, maintaining, and preserving nearly all your snow-related gear. <a href="">Read more &gt;&gt;</a>
+               </p> 
+         	</article>
+		</aside>
+		
+		</section>
+     	
+     	<!-- MAIN SECTION WITH ARTICLES -->
+    
+     	<main>
+     		<section id="blogMain">
+     	
+     		<aside class="theLatest">
+           		<h1 class="fullWidth">The Latest</h1>
+           	
+            	<article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="../images/img_blog_gift.jpg" alt="gift box"></a>
+                        <figcaption><a href="#">Eco-Friendly Gifts for Friends and Family</a></figcaption>
+                    </figure>
+                    <p>If you’re looking to cut down on gift waste this year, check out these eco-friendly gifts that are perfect for friends and family! These gifts are certified good for people and the planet. <a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article> 
+                
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="../images/img_blog_cookies.jpg" alt="cookies"></a>
+                        <figcaption><a href="#">Pumpkin Spice Chocolate Chunk Cookies</a></figcaption>
+                    </figure>
+                    <p>What is it about pumpkin spice that we love so much? Perhaps its Magic is in the familiar taste and smell of cinnamon & nutmeg on a crisp fall morning.<a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+                
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="../images/img_blog_plastics.jpg" alt="plastic"></a>
+                        <figcaption><a href="#">How We’re Addressing Our Plastic Use </a></figcaption>
+                    </figure>
+                    <p>Nearly all of our plastic bottles are made from post-consumer recycled (PCR) plastic, a practice Dr. Bronner’s helped pioneer more than fifteen years ago.<a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+                
+                 <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="../images/img_blog_regenerative.jpg" alt="plastic"></a>
+                        <figcaption><a href="#">Regenerative Organic Certified™ Launched! </a></figcaption>
+                    </figure>
+                    <p>If we adopt regenerative organic practices on more farms, we’ll see improvements to soil health, the well-being of animals, farmers, workers, and the climate itself.<a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article> 
+                
+            </aside>
+            
+     		<aside class="mostRead">
+                <h1 class="fullWidth">Most read</h1>
+                 
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="../images/img_dilution.jpg" alt="soap dilution"></a>
+                        <figcaption><a href="#">Liquid Soap Dilution Cheat Sheet</a></figcaption>
+                    </figure>
+                    <p>Dilute! Dilute! OK! But how much? Here’s a quick reference. None of these soap dilutions are meant to be exact amounts. <a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+       
+                 <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="../images/img_pet.jpg" alt="pet care"></a>
+                        <figcaption><a href="#">Pet Care with Dr. Bronner's</a></figcaption>
+                    </figure>
+                    <p>Washing pets with Dr. Bronner’s (not just for dogs!) If you haven’t seen Lisa Bronner’s video on how to wash your dog with Dr. Bronner’s, then we recommend you watch that first. <a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+                
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="../images/img_regenerative.jpg" alt="regenerative cocoa"></a>
+                        <figcaption><a href="#">Dr. Bronner's Path to Regenerative Cocoa</a></figcaption>
+                    </figure>
+                    <p>The following post is an abridged excerpt from my book Honor Thy Label: Dr. Bronner’s Unconventional Journey to a Clean, Green, and Ethical Supply Chain. <a href="">Read more &gt;&gt;</a>
+                    </p>
+                </article>
+                
+                <article class="posts">
+                    <figure class="postImg">
+                        <a href="#"><img src="../images/img_bicycle.jpg" alt="bicycle cleaning"></a>
+                        <figcaption><a href="#">Clean Your Bicycle with Dr. Bronner's</a></figcaption>
+                    </figure>
+                    <p>Enjoy feeling the fun and freedom only bikes provide? I sure love to ride my hybrid road/mountain bike on my local cycleways. And I love to use Dr. Bronner’s to clean my gear. <a href="">Read more &gt;&gt;</a>
+                    </p>
+				</article>
+            </aside>            
+     	</section>
+	</main>
+    	
+     	<aside class="goToPage">
+			<p><a href="../pages/shop_all.html">Go to shop &gt;&gt;</a></p>
+     	</aside>
+        
+      
+        <!-- FOOTER -->
+        <footer>
+            <p>      
+               <a href="#"><img src="../images/icon_facebook.png" alt="facebook icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_twitter.png" alt="twitter icon" class="medIcons"></a>
+               <a href="#"><img src="../images/icon_instagram.png" alt="instagram icon" class="medIcons"></a>
+            </p>    
+            <div class="footflex">
+                <p><a href="I_faq.html">FAQs</a></p>
+                <!-- ADD SYMBOL TO SCROLL TO TOP -->
+                <p><a href="#pageTop"><span class="mi material-symbols-outlined">assistant_navigation</span></a></p>
+            </div>         
+        </footer>
+        
+        <footer class="foot2">
+            <p>&copy; 2023 | Dr. Bronner's Magic Soaps</p>
+            <p>Questions? Email us at <a href="mailto:info@drbronner.com" target="_blank">info@drbronner.com</a></p>
+        </footer>        
+    </body>
+</html>
+        
